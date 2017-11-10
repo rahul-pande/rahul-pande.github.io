@@ -26,6 +26,8 @@ linkedin_username: pande-rahul
 # Google Analytics Settings
 google_analytics: UA-109424948-1
 
+disqus:
+  shortname: rahulpande-me
 # Build settings
 markdown: kramdown
 theme: minima
