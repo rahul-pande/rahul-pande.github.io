@@ -10,9 +10,11 @@
     (function() {
       var d = document, s = d.createElement('script');
 
-      console.log('{{ site.disqus.shortname }}');
+      console.log(' shortname: {{ site.disqus.shortname }}');
+      console.log('page url: {{ page.url | absolute_url }}');
+      console.log('page identifier: {{ page.url | absolute_url }}');
 
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+      s.src = '//{{ site.disqus.shortname }}.disqus.com/embed.js';
 
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
