@@ -10,6 +10,8 @@
     (function() {
       var d = document, s = d.createElement('script');
 
+      console.log('{{ site.disqus.shortname }}');
+
       s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
 
       s.setAttribute('data-timestamp', +new Date());
