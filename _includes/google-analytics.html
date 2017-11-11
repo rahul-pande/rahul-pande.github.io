@@ -9,6 +9,39 @@
   gtag('config', '{{ site.google_analytics }}');
 </script> -->
 
+<script>
+  function createCookie(name,value,days) {
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime()+(days*24*60*60*1000));
+      var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+
+  function eraseCookie(name) {
+    createCookie(name,"",-1);
+  }
+
+  function uuidv4(){
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+      )
+  }
+</script>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,20 +51,15 @@
 
   ga('create', '{{ site.google_analytics }}', 'auto');
 
-  /* If the browser_id hasn't already been set... */
-  if (document.cookie.indexOf('browser_uuid_set=1') == -1){
+  var cookieName = 'browser_uuid'
 
-    function uuidv4(){
-      return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-        )
-    }
-    /* Generate a UUID, and assign it to the browser_id custom dimension */
-    ga('set', 'dimension1', uuidv4());
-
-    /* Set a cookie so we won't override the UUID we just set */
-    document.cookie = 'browser_uuid_set=1; expires=Fri, 01 Jan 2100 12:00:00 UTC; domain=.rahulpande.me; path=/';
+  if(readCookie(cookieName) == null){
+    createCookie(cookieName, uuidv4(), 365)
   }
+
+  console.log(readCookie())
+
+  ga('set', 'dimension1', readCookie());
 
   /* Assign a timestamp to the utc_millisecs custom dimension */
   ga('set', 'dimension2', new Date().getTime());
