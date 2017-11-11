@@ -248,3 +248,22 @@
     }
   }
 }
+
+
+/**
+ * Icon Links
+ *
+ */
+.icon-link {
+  color: $grey-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $grey-color;
+  }
+
+  &:hover {
+    color: $grey-color-dark;
+    text-decoration: underline;
+  }
+}
