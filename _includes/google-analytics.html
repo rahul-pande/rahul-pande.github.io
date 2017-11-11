@@ -57,9 +57,9 @@
     createCookie(cookieName, uuidv4(), 365)
   }
 
-  console.log(readCookie())
+  console.log(readCookie(cookieName))
 
-  ga('set', 'dimension1', readCookie());
+  ga('set', 'dimension1', readCookie(cookieName));
 
   /* Assign a timestamp to the utc_millisecs custom dimension */
   ga('set', 'dimension2', new Date().getTime());
