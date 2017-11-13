@@ -1,9 +1,12 @@
 {% if page.comments != false and jekyll.environment == "production" %}
 
-  <div id="disqus_thread"></div>
+  <div id="disqus_thread">
 
-  <a class="btn" href="#" onclick="load_disqus()">
-    <i class="fa-comments"></i>Load Comments</a>
+  <a class="button-link" id="load_comments" href="#">
+    <span class="icon fa fa-comments"></span>
+    Load Comments
+  </a>
+
 
   <script>
     var disqus_config = function () {
@@ -12,6 +15,8 @@
     };
 
     var disqus_loaded = false;
+    var button = document.getElementById('load_comments');
+    button.addEventListener('click',load_disqus,false);
 
     function load_disqus() {
       if (!disqus_loaded){
@@ -22,30 +27,12 @@
         s.src = '//{{ site.disqus.shortname }}.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
+        this.style.display = 'none'
       }
     }
 
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </div>
 {% endif %}
-
-
-<!-- <div id="disqus_thread">
-  <a style="color: #fff;background-color:#498AF4;padding: 10px 10px 10px 10px;" href="#" onclick="disqus();return false;" role="button" rel="nofollow">Add/Load Comments</a>
-</div>
-  <script type="text/javascript">
-  var disqus_shortname = "goyllo";
-  var disqus_loaded = false;
-  function disqus() {
-    if (!disqus_loaded){
-      disqus_loaded = true;
-      var e = document.createElement("script");
-      e.type = "text/javascript";
-      e.async = true;
-      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-      (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(e);
-    }
-  }
-</script>
-</div>
- -->

@@ -16,10 +16,10 @@ permalink: /projects/
 </div> -->
 
 **Features:**
-+ Simple UI
-+ Push Notifications for communication between the management and students
-+ Easy Download Section
-+ Light and Blazing Fast (900kB)
+* Simple UI
+* Push Notifications for communication between the management and students
+* Easy Download Section
+* Light and Blazing Fast (900kB)
 
 The app was built with Google Cloud Messaging, and served as a notification medium for important college events like semester registration deadline, flash mobs, etc. It was also a convinient option for students to download all types of important documents like class time tables, curriculum.
 

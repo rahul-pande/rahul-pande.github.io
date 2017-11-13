@@ -37,8 +37,27 @@
   }
 
   .page-link {
-    color: $text-color;
+
     line-height: $base-line-height;
+    text-align: center;
+
+    background: linear-gradient(rgb(51, 189, 239) 5%, rgb(1, 154, 210) 100%) rgb(51, 189, 239);
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    padding: 8px 12px;
+    text-shadow: rgb(133, 70, 41) 0px 1px 0px;
+    text-decoration: none;
+
+    &:visited {
+      color: white;
+    }
+
+    &:hover {
+      color: $grey-color-light;
+      text-decoration: none;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -265,5 +284,35 @@
   &:hover {
     color: $grey-color-dark;
     text-decoration: underline;
+  }
+}
+
+/**
+ * Button Link
+ *
+ */
+.button-link {
+  display: block;
+  line-height: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+
+  background: linear-gradient(rgb(51, 189, 239) 5%, rgb(1, 154, 210) 100%) rgb(51, 189, 239);
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  text-shadow: rgb(133, 70, 41) 0px 1px 0px;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    color: $grey-color-light;
+    text-decoration: none;
   }
 }
