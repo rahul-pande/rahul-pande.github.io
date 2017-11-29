@@ -43,7 +43,7 @@ The app was built with Google Cloud Messaging, and served as a **notification me
 
 ![website_screen_1]![website_screen_2]![website_screen_3]
 
-
+// In progress. Please check back again.
 
 [website_screen_1]: https://raw.githubusercontent.com/rahul-pande/website_insights/master/_screenshots/knowledge_graph.png
 [website_screen_2]: https://raw.githubusercontent.com/rahul-pande/website_insights/master/_screenshots/graph_subset_1.png
