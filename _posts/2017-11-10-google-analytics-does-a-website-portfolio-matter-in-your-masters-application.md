@@ -106,7 +106,7 @@ GA does not allow exporting event level raw data. It only gives aggregated metri
 If your website already has significant traffic from the places that you're Universities are, you would need to set up custom campaigns to distinguish the application statement traffic from the other traffic. You can use the [**Campaign URL Builder**](https://ga-dev-tools.appspot.com/campaign-url-builder/){: target='_blank'} and setup up links for different Universities that you're applying to.
 
 **Important Note:**
-> Inserting a shortened URL is not a good idea since you don't have user's consent to be tracked.
+> Inserting a shortened URL in a University application is not a good idea since you don't have user's consent to be tracked.
 > This is why I think you should refrain from using URL shortening services like bit.ly.
 > Instead, enter plan website name like rahulpande.me and then link it to the custom tracking URL; that way the user could still copy paste the text if he wishes to be not tracked explicitly
 
