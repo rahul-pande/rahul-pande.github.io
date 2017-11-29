@@ -3,26 +3,30 @@ layout: post
 title: "Google Analytics: Know when admission committees look at your website portfolio"
 author: Rahul Pande
 date: 2017-11-10 9:26:10 +0530
-last_update: 2017-11-10 9:26:10 +0530
+last_update: 2017-11-29 9:26:10 +0530
 categories: analytics ga
 ---
 
 How important is it to include a website portfolio in your master's application? Despite the availability of a lot of website solutions out of the box, publishing a website still takes up a significant amount of time. Is it worth it to spend that time on deploying a website when you could instead allocate that chunk of time in other aspects of the application, maybe improve your personal statement?
 
+## Contents
+
 - [Do admission committees go through your website portfolio?](#do-admission-committees-go-through-your-website-portfolio)
 - [Adding Google Analytics to your website](#adding-google-analytics-to-your-website)
+- [Adding custom dimensions for event level tracking](#adding-custom-dimensions-for-event-level-tracking)
+- [Setting up Custom Campaigns](#setting-up-custom-campaigns)
 
 ### Do admission committees go through your website portfolio?
 
-However, the second and more important question is- Do the admission committees visit your website when you put a link inline the essay? I never got a concrete answer to this question. So I decided to make a simple project out of it, with Google Analytics.
+However, the second and more important question is- Do the admission committees visit your website when you put a link in the essay? I never got a concrete answer to this question. So I decided to make a simple project out of it, with Google Analytics.
 
 ### Adding Google Analytics to your website
 
-Sign up with [Google Analytics](https://analytics.google.com) and enter your website details. Under the **Admin** menu, in the **Property** sub-category, click on **Tracking Info**. Paste this tracking code in all of the pages that you want to be tracked. If you're using a template engine, make sure you include it in the head.
+Sign up with [**Google Analytics**](https://analytics.google.com){: target='_blank'} and enter your website details. Under the **Admin** menu, in the **Property** sub-category, click on **Tracking Info**. Paste this tracking code in all of the pages that you want to be tracked. If you're using a template engine, make sure you include it in the head.
 
 ### Adding custom dimensions for event level tracking
 
-GA does not allow exporting event level raw data. It only gives aggregated metrics. However there's an easy workaround for this. GA allows to introduce upto 20 custom dimensions. We can exploit this to add a user identifier ( set a bowser cookie) and a time field. So that if you were to query using the [**Query Explorer**](https://ga-dev-tools.appspot.com/query-explorer/) you would get event level data.
+GA does not allow exporting event level raw data. It only gives aggregated metrics. However, there's an easy workaround for this. GA allows up to 20 custom dimensions. We can exploit this to add a user identifier ( set a browser cookie) and a time field. So that if you were to query using the [**Query Explorer**](https://ga-dev-tools.appspot.com/query-explorer/){: target='_blank'} you would get event-level data.
 
 <details markdown="1">
 <summary>Expand Tracking Code</summary>
@@ -98,9 +102,24 @@ GA does not allow exporting event level raw data. It only gives aggregated metri
 
 ### Setting up Custom Campaigns
 
-If your website already has significant traffic from the places that you're Universities are, you would need to set up custom campaigns to distinguish the application statement traffic from the other traffic. You can use the [Campaign URL Builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) and setup up links for different Universities that you're applying to.
+If your website already has significant traffic from the places that you're Universities are, you would need to set up custom campaigns to distinguish the application statement traffic from the other traffic. You can use the [**Campaign URL Builder**](https://ga-dev-tools.appspot.com/campaign-url-builder/){: target='_blank'} and setup up links for different Universities that you're applying to.
+
+**Important Note:**
+> Inserting a shortened URL is not a good idea since you don't have user's consent to be tracked.
+> This is why I think you should refrain from using URL shortening services like bit.ly.
+> Instead, enter plan website name like rahulpande.me and then link it to the custom tracking URL; that way the user could still copy paste the text if he wishes to be not tracked explicitly
+
 
 ![](/assets/img/custom_ga_campaign.png)
 
+You should have something like below in your Query Explorer Result which you can export as CSV.
 
-// In progress. Please check back again.
+![](/assets/img/ga_raw_data.png)
+
+You could do a whole bunch of analytics around this. Some points that I will be publishing at the end of this exercise are:
+- Do Universities look beyond the main landing page?
+- It would also be interesting to see the box plot of the number of website visits versus University application outcome (admit/reject) and then check how much of the variation in the number of visits can be explained by the University outcome.
+
+If you have any thoughts on this, please let me know in the comments section!
+
+> If you are a member of one of the admission committees, let me know if and how this post influenced the decision!
