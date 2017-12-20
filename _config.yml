@@ -16,7 +16,7 @@
 title: Rahul Pande
 email: 93rahulpande@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Machine Learning | Business Intelligence | Data Engineering. I often tweak custom Android ROMs.
+  Machine Learning | Analytics | Data Engineering. I often tweak custom Android ROMs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rahulpande.me" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
