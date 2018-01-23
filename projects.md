@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### Android App for Vishwakarma Institute of Technology
+# Android App for Vishwakarma Institute of Technology
 
 <div class="list-group">
   <a class="list-group-item icon-link" href="https://github.com/rahul-pande/vit" target="_blank">
@@ -34,7 +34,7 @@ The app was built with Google Cloud Messaging, and served as a **notification me
 
 <br>
 
-### Website Insights
+# Website Insights
 
 <div class="list-group">
   <a class="list-group-item icon-link" href="https://github.com/rahul-pande/website_insights" target="_blank">
