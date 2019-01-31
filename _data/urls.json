@@ -1,0 +1,35 @@
+[
+  {
+    "text": "Projects",
+    "url": "/",
+    "icon": "fa-desktop"
+  },
+  {
+    "text": "Blog",
+    "url": "/blog",
+    "icon": "fa-book",
+    "layout": "post"
+  },
+  {
+    "text": "About",
+    "url": "/about/",
+    "icon": "fa-comments"
+  },
+  {
+    "text": "Resume",
+    "url": "/resume",
+    "icon": "fa-graduation-cap",
+  },
+  {
+    "text": "Github",
+    "url": "https://github.com/rahul-pande",
+    "icon": "fa-github",
+    "target": "_blank"
+  },
+  {
+    "text": "XML Feed",
+    "url": "/feed.xml",
+    "icon": "fa-feed",
+    "target": "_blank"
+  }
+]

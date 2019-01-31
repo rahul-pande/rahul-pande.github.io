@@ -15,7 +15,7 @@ How important is it to include a website portfolio in your master's application?
 - [Adding Google Analytics to your website](#adding-google-analytics-to-your-website)
 - [Adding custom dimensions for event level tracking](#adding-custom-dimensions-for-event-level-tracking)
 - [Setting up Custom Campaigns](#setting-up-custom-campaigns)
-- [**Analytics**](#analytics)
+- [Analytics](#analytics)
 
 ### Do admission committees go through your website portfolio?
 
@@ -124,5 +124,3 @@ You could do a whole bunch of analytics around this. Some points that I will be 
 - It would also be interesting to see the box plot of the number of website visits versus University application outcome (admit/reject) and then check how much of the variation in the number of visits can be explained by the University outcome.
 
 If you have any thoughts on this, please let me know in the comments section!
-
-> If you are a member of one of the admission committees, let me know if and how this post influenced the decision!
