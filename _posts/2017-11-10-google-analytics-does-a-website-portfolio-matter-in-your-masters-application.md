@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Google Analytics: Know when admission committees look at your website portfolio"
+title: "Google Analytics: Measuring reach with your Résumé"
 author: Rahul Pande
 date: 2017-11-10 9:26:10 +0530
 last_update: 2017-11-29 9:26:10 +0530
 categories: analytics ga
+comments: true
 ---
 
 How important is it to include a website portfolio in your master's application? Despite the availability of a lot of website solutions out of the box, publishing a website still takes up a significant amount of time. Is it worth it to spend that time on deploying a website when you could instead allocate that chunk of time in other aspects of the application, maybe improve your personal statement?
