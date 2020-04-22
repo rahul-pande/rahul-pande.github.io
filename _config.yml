@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
+remote_theme: "mmistakes/so-simple-theme@master"
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Rahul Pande"
@@ -27,16 +27,11 @@ date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 200
 
-#mathjax:
-#  enable: true
-#  combo: "tex-mml-chtml"
-#  tags: "none"
-
 markdown: kramdown
 mathjax:
   enable: true
-#  combo: "tex-svg"
-#  tags: "ams"
+  combo: "tex-svg"
+  tags: "ams"
 
 google_fonts:
   - name: "Source Sans Pro"
